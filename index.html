@@ -6,6 +6,53 @@
     <title>A.E.A Task</title>
 </head>
 <body>
-    TAsk card   
+    
 </body>
-</html>
+</html><div class="taskCard-container">
+ 
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <div class="brand-logo" aria-hidden="true">AEA</div>
+      <div class="brand-text">
+        <h1>AEA Digitals</h1>
+        <p>Task Manager</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="task-count" id="taskCount" aria-live="polite">4 tasks</span>
+      <button class="btn-new" id="openModal" aria-label="Add new task" aria-haspopup="dialog">
+        <!-- Plus icon -->
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        New Task
+      </button>
+    </div>
+  </header>
+ 
+  <!-- STATS -->
+  <div class="stats-row" role="region" aria-label="Task statistics">
+    <div class="stat-chip s-todo"><span class="stat-val" id="st-todo">0</span><span class="stat-label">To Do</span></div>
+    <div class="stat-chip s-prog"><span class="stat-val" id="st-prog">0</span><span class="stat-label">In Progress</span></div>
+    <div class="stat-chip s-done"><span class="stat-val" id="st-done">0</span><span class="stat-label">Done</span></div>
+    <div class="stat-chip s-block"><span class="stat-val" id="st-block">0</span><span class="stat-label">Blocked</span></div>
+  </div>
+
+
+  <div class="filter-row" role="group" aria-label="Filter tasks">
+    <button class="fbtn active" data-filter="all">All</button>
+    <button class="fbtn" data-filter="todo">To Do</button>
+    <button class="fbtn" data-filter="in-progress">In Progress</button>
+    <button class="fbtn" data-filter="done">Done</button>
+    <button class="fbtn" data-filter="blocked">Blocked</button>
+  </div>
+ 
+  <!-- CARDS -->
+  <div class="card-list" id="cardList" role="list" aria-label="Task list"></div>
+  <div class="empty-state" id="emptyState" aria-live="polite">
+    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+      <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+    </svg>
+    No tasks here — hit <strong>New Task</strong> to get started!
+  </div>
+ 
+</div>
